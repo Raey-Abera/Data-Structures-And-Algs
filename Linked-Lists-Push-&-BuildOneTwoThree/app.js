@@ -21,9 +21,9 @@ function Node(data) {
   }
   
   function push(head, data) {
-    let nNode = new Node(data);
-    nNode.next = head;
-    return nNode;
+    let newNode = new Node(data);
+    newNode.next = head;
+    return newNode;
   }
   
   function buildOneTwoThree() {
