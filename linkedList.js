@@ -9,30 +9,30 @@ class LinkedList {
         this.head = null
     }
     //This method returns the number of nodes present in the linked list
-    size() { 
-        if(!this.head) return null
+    size() {
+        let count = 0
         let node = this.head
-        let counter = 0
-        while(node) {
+        while (node) {
+            count++;
             node = node.next
-            counter++
         }
-        return counter
+        return count
     }
     //This method empties out the list
     clear() {
         this.head = null
     }
-    //This method returns the last node of the linked list
+    //This method returns the last node of the linked list.
     getLast() {
-        let node = this.head
-        while(node) {
-            if(!node.next) return node
-            node = node.next
+        let lastNode = this.head
+        if (lastNode) {
+            while (lastNode.next) {
+                lastNode = lastNode.next
+            }
         }
-        return null
+        return lastNode
     }
-    //This method returns the first node of the linked list
+    //This method returns the first node of the linked list.
     getFirst() {
         return this.head
     }
