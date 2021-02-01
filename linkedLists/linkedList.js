@@ -1,19 +1,21 @@
-class Node {
-    constructor(data, next = null) {
+class ListNode {
+    constructor(data) {
         this.data = data
-        this.next = next
+        this.next = null
     }
 }
+
 class LinkedList {
-    constructor() {
-        this.head = null
+    constructor(head = null) {
+        this.head = head
     }
+
     //This method returns the number of nodes present in the linked list
     size() {
         let count = 0
         let node = this.head
         while (node) {
-            count++;
+            count++
             node = node.next
         }
         return count
