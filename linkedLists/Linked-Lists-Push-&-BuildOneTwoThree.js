@@ -16,22 +16,22 @@ https://www.codewars.com/kata/55be95786abade3c71000079
 // The buildOneTwoThree function should create and return a linked list with three nodes: 1 -> 2 -> 3 -> null
 
 function Node(data) {
-    this.data = data;
-    this.next = null;
+    this.data = data
+    this.next = null
   }
   
   function push(head, data) {
-    let newNode = new Node(data);
-    newNode.next = head;
-    return newNode;
+    let newNode = new Node(data)
+    newNode.next = head
+    return newNode
   }
   
   function buildOneTwoThree() {
-    let list = null;
-    list = push(list, 3);
-    list = push(list, 2);
-    list = push(list, 1);
-    return list;
+    let list = null
+    list = push(list, 3)
+    list = push(list, 2)
+    list = push(list, 1)
+    return list
   }
 
 

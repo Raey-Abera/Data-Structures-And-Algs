@@ -79,7 +79,7 @@ class SinglyLinkedList {
         this.length--
         //check if empty and set tail to null
         if (this.length === 0) {
-            this.tail = null;
+            this.tail = null
         }
         //return value of the node removed (from the beginning)
         return current
@@ -190,13 +190,13 @@ class SinglyLinkedList {
     reverse() {
         // swap the head and tail
         // create a variable called node and initialize it to the head property
-        let node = this.head;
-        this.tail = node;
-        this.head = this.tail;
+        let node = this.head
+        this.tail = node
+        this.head = this.tail
         // create a variable called next
-        let next;
+        let next
         // create a variable called prev
-        let prev = null;
+        let prev = null
         // loop through list
         for (let i = 0; i < this.length; i++) {
             // set next to be the next property on whatever node is

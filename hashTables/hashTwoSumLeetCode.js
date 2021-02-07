@@ -1,4 +1,4 @@
-//https://leetcode.com/problems/two-sum/
+// https://leetcode.com/problems/two-sum/
 
 const twoSum = (numbers, target) => {
     let numberIndex = new Map()
