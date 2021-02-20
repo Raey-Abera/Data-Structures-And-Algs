@@ -23,7 +23,7 @@ https://leetcode.com/problems/merge-k-sorted-lists/
 
 // Input: lists = [[]]
 // Output: []
- 
+
 // Constraints:
 // k == lists.length
 // 0 <= k <= 10^4
@@ -33,26 +33,26 @@ https://leetcode.com/problems/merge-k-sorted-lists/
 // The sum of lists[i].length won't exceed 10^4.
 
 
-var mergeKLists = function(lists) {
+var mergeKLists = function (lists) {
     if (lists.length == 0) return null
-    
-    let result;
+
+    let result
     for (let i = 0; i < lists.length; i++) {
-        if (i==0) result = toFlat(lists[i])
+        if (i == 0) result = toFlat(lists[i])
         else result = toFlat(lists[i], result)
     }
-    
-    
-    result.sort((a,b) => a - b)
+
+
+    result.sort((a, b) => a - b)
     let resultOb = null
-    for (let i = result.length-1; i >= 0; i--) {
-        resultOb = {val: result[i], next: resultOb}
+    for (let i = result.length - 1; i >= 0; i--) {
+        resultOb = { val: result[i], next: resultOb }
     }
     return resultOb
-};
+}
 
 let toFlat = (l, arr = []) => {
-    while (l!=null) {
+    while (l != null) {
         arr.push(l.val)
         l = l.next
     }
