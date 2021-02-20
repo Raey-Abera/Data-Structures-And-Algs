@@ -54,7 +54,7 @@ var mergeKLists = function (lists) {
 let toFlat = (l, arr = []) => {
     while (l != null) {
         arr.push(l.val)
-        l = l.next
+        l = l.nextc
     }
     return arr
 }
